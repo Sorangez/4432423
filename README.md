@@ -1,13 +1,15 @@
 ```markdown
-# Data Engineering Capstone: Three Tasks Pipeline
+# Assignment 1: Data Pipeline with Docker
 
-This repository contains three separate data‑engineering tasks, each of which you can run independently.
+This repository contains three separate tasks, each of which you can run independently.
+
+Tutorial Video Link: https://youtu.be/mttadZUKRcY
 
 ## Table of Contents
 1. [Prerequisites](#prerequisites)  
 2. [Task 1: OpenWeatherMap Data Pipeline (12 pts)](#task-1-openweathermap-data-pipeline-12-pts)  
 3. [Task 2: Faker API Data Pipeline (12 pts)](#task-2-faker-api-data-pipeline-12-pts)  
-4. [Task 3: [Add Your Task Title Here]](#task-3-add-your-task-title-here)  
+4. [Task 3: CoinGecko Crypto Prices Pipeline (12 pts)](#task-3-coingecko-crypto-prices-pipeline-12-pts)  
 5. [License](#license)  
 
 ---
@@ -24,7 +26,7 @@ This repository contains three separate data‑engineering tasks, each of which 
 - Repository layout as follows:
 
 ```
-
+```
 .
 ├── cassandra/
 │   └── docker-compose.yml
@@ -47,7 +49,7 @@ This repository contains three separate data‑engineering tasks, each of which 
 ├── cassandra/schema-faker.cql
 └── kafka/connect/create-cassandra-sink.sh
 
-````
+```
 
 ---
 
@@ -459,31 +461,16 @@ Ingest hourly crypto price data from the CoinGecko API into Cassandra via Kafka.
    SELECT * FROM crypto_prices;
    ```
 
----
-
-## Common Tips & Troubleshooting
-
-* **Port Conflicts**
-
-  ```bash
-  docker ps
-  docker rm -f <container>
-  ```
-* **Cassandra Persistence**
-  Check `volumes:` in `docker-compose.yml`.
-* **Kafka Connect Errors**
-
-  ```bash
-  docker logs <connect-container-name>
-  ```
-* **Dependency Issues**
-  Verify `faker`, `cassandra-driver`, and `requests` (or other API libs) are in your `requirements.txt`.
-
----
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under Nguyen Thanh Tung - s3979425.
+
+
+## Acknowledgements
+
+- Readme and debugging assistance generated with AI tools.  
+- Main help from [docker-kafka-cassandra GitHub repository](https://github.com/vnyennhi/docker-kafka-cassandra).
 
 ```
 ```
